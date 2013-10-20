@@ -22,4 +22,9 @@ class Class
       self.__send__("unknown_message:with_params:", method_name, args)
     end
   end
+  
+  def subclass(name = nil, under = nil, &block)
+    superclass = self
+    Class.new(superclass, name, under, &block)
+  end
 end

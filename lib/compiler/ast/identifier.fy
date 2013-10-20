@@ -92,7 +92,7 @@ class Fancy AST {
     def bytecode: g {
       pos(g)
       # Use quick constant lookup (top-level handled in TopLevelConstant).
-      g push_const(name)
+      g push_const(@string to_sym)
     }
   }
 
